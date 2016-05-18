@@ -8,22 +8,29 @@ import java.util.regex.Pattern;
  */
 public class ValidationHelper {
 
-    public static boolean isEmailValid(String email) {
-        boolean isValid = false;
+    private Pattern pattern;
+    private Matcher matcher;
 
-        if (email.length() > 100)
-            return isValid;
+    private static final String EMAIL_PATTERN =
+            "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                    + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
-        String expression = "^@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([\\w-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$";
+    public ValidationHelper() {
+        pattern = Pattern.compile(EMAIL_PATTERN);
+    }
 
-        CharSequence inputStr = email;
+    /**
+     * Validate hex with regular expression
+     *
+     * @param hex
+     *            hex for validation
+     * @return true valid hex, false invalid hex
+     */
+    public  boolean validate(final String hex) {
 
-        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher(inputStr);
-        if (matcher.matches()) {
-            isValid = true;
-        }
-        return isValid;
+        matcher = pattern.matcher(hex);
+        return matcher.matches();
+
     }
 
 }

@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -10,13 +11,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.mywings.justolm.LoginActivity">
 
-    <ProgressBar
-        android:id="@+id/login_progress"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone" />
 
     <ScrollView
         android:id="@+id/login_form"
@@ -29,47 +23,38 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="vertical"
-            android:padding="9dp">
+            android:padding="12dp">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
-                <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/userName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/login_control_shape"
-                    android:gravity="bottom"
-                    android:hint="@string/prompt_email"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:singleLine="true"
-                    android:textColorHint="@color/colorAccent" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/userName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
+                android:background="@drawable/login_controlshape"
+                android:gravity="center_vertical"
+                android:hint="@string/prompt_email"
 
-                <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/login_control_shape"
-                    android:gravity="bottom"
-                    android:hint="@string/prompt_password"
-                    android:imeActionId="@+id/login"
-                    android:imeActionLabel="@string/action_sign_in_short"
-                    android:imeOptions="actionDone"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true"
-                    android:textColorHint="@color/colorAccent" />
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHint="@color/colorAccent" />
 
-            </android.support.design.widget.TextInputLayout>
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/login_controlshape"
+                android:gravity="center_vertical"
+                android:hint="@string/prompt_password"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHint="@color/colorAccent" />
 
 
             <LinearLayout
@@ -122,6 +107,7 @@
                     android:linksClickable="true"
                     android:text="@string/action_login_admin"
                     android:textAllCaps="false"
+                    android:textColor="@android:color/white"
                     android:textStyle="bold" />
 
 
@@ -136,10 +122,13 @@
                     android:linksClickable="true"
                     android:text="@string/action_forgot_password"
                     android:textAllCaps="false"
+                    android:textColor="@android:color/white"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
+
+
 </LinearLayout>
