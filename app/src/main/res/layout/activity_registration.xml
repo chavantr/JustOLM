@@ -396,7 +396,9 @@
             android:layout_marginTop="5dp"
             android:background="@drawable/login_controlshape"
             android:hint="Re-enter password"
-            android:imeOptions="actionNext"
+            android:imeActionId="@+id/btnCreateAccount"
+            android:imeActionLabel="@string/create_account"
+            android:imeOptions="actionUnspecified"
             android:inputType="textPassword"
             android:lines="1"
             android:singleLine="true" />

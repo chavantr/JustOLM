@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.support.v7.widget.AppCompatCheckBox;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatSpinner;
 import android.support.v7.widget.AppCompatTextView;
@@ -11,7 +12,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.Toast;
 
 import com.mywings.justolm.Utilities.Halted;
 
@@ -39,6 +39,7 @@ public class Registration extends JustOlmCompactActivity {
     private AppCompatEditText txtSecurityCode;
     private AppCompatEditText txtCreatePassword;
     private AppCompatEditText txtConformPassword;
+    private AppCompatCheckBox chkTermsAndCoditions;
     private Button btnCreateAccount;
     //endregion
 
@@ -94,6 +95,7 @@ public class Registration extends JustOlmCompactActivity {
         txtSecurityCode = (AppCompatEditText) findViewById(R.id.txtSecurityCode);
         txtCreatePassword = (AppCompatEditText) findViewById(R.id.txtPassword);
         txtConformPassword = (AppCompatEditText) findViewById(R.id.txtConfirmPassword);
+        chkTermsAndCoditions = (AppCompatCheckBox) findViewById(R.id.chkTermsAndConditions);
         btnCreateAccount = (Button) findViewById(R.id.btnCreateAccount);
         lblSecurityCode.setText(halted.getSaltString());
     }
@@ -119,7 +121,7 @@ public class Registration extends JustOlmCompactActivity {
         }
 
         public void onDateSet(DatePicker view, int year, int month, int day) {
-            dateTimeUtils.update(year, month, day);
+            txtDateOfBirth.setText(dateTimeUtils.update(year, month, day));
         }
 
     }
@@ -136,6 +138,7 @@ public class Registration extends JustOlmCompactActivity {
      *
      */
     private void updateRegistration() {
+
         registration.setFirstName(txtFirstName.getText().toString().trim());
         registration.setMiddleName(txtMiddleName.getText().toString().trim());
         registration.setLastName(txtLastName.getText().toString().trim());
@@ -152,6 +155,20 @@ public class Registration extends JustOlmCompactActivity {
         registration.setMobileNumber(txtMobileNumber.getText().toString().trim());
         registration.setSecurityCode(txtSecurityCode.getText().toString().trim());
         registration.setPassword(txtCreatePassword.getText().toString().trim());
-        Toast.makeText(Registration.this,registration.getFirstName(),Toast.LENGTH_LONG).show();
+
+        validateRegistrationInfo();
     }
+
+    private void validateRegistrationInfo() {
+        if (null != registration) {
+            if (registration.isEmptyField()) {
+                show(getString(R.string.action_all_fields_mandetory), btnCreateAccount);
+            } else if (registration.isNotEmptyField()) {
+
+            }
+        } else {
+            show("Please try again", btnCreateAccount);
+        }
+    }
+
 }

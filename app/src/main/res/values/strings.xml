@@ -54,6 +54,7 @@
     <string name="state">State :</string>
     <string name="city">City :</string>
     <string name="enter_city">Enter city</string>
+    <string name="action_all_fields_mandetory">All (*) fields are mandatory</string>
 
 
     <array name="gender">
