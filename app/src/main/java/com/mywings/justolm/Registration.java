@@ -4,19 +4,20 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatSpinner;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.Toast;
 
 import com.mywings.justolm.Utilities.Halted;
 
 import java.util.Calendar;
 
-public class Registration extends AppCompatActivity {
+public class Registration extends JustOlmCompactActivity {
 
 
     //region UI Controls
@@ -28,6 +29,9 @@ public class Registration extends AppCompatActivity {
     private AppCompatEditText txtProfession;
     private AppCompatEditText txtAddress;
     private AppCompatSpinner txtCountry;
+    private AppCompatSpinner txtState;
+    private AppCompatEditText txtCity;
+    private AppCompatSpinner txtArea;
     private AppCompatEditText txtPinCode;
     private AppCompatEditText txtEmail;
     private AppCompatEditText txtMobileNumber;
@@ -35,11 +39,13 @@ public class Registration extends AppCompatActivity {
     private AppCompatEditText txtSecurityCode;
     private AppCompatEditText txtCreatePassword;
     private AppCompatEditText txtConformPassword;
+    private Button btnCreateAccount;
     //endregion
 
     //region Variables
     private Halted halted;
     final Calendar c = Calendar.getInstance();
+    final com.mywings.justolm.Model.Registration registration = com.mywings.justolm.Model.Registration.getInstance();
     //endregion
 
 
@@ -61,6 +67,12 @@ public class Registration extends AppCompatActivity {
                 showDatePickerDialog();
             }
         });
+        btnCreateAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updateRegistration();
+            }
+        });
     }
 
     private void initializaUIComponents() {
@@ -71,6 +83,9 @@ public class Registration extends AppCompatActivity {
         txtGender = (AppCompatSpinner) findViewById(R.id.txtGender);
         txtProfession = (AppCompatEditText) findViewById(R.id.txtProfession);
         txtAddress = (AppCompatEditText) findViewById(R.id.txtAddress);
+        txtState = (AppCompatSpinner) findViewById(R.id.txtState);
+        txtCity = (AppCompatEditText) findViewById(R.id.txtCity);
+        txtArea = (AppCompatSpinner) findViewById(R.id.txtArea);
         txtCountry = (AppCompatSpinner) findViewById(R.id.txtCountry);
         txtPinCode = (AppCompatEditText) findViewById(R.id.txtPinCode);
         txtEmail = (AppCompatEditText) findViewById(R.id.txtEmail);
@@ -79,9 +94,13 @@ public class Registration extends AppCompatActivity {
         txtSecurityCode = (AppCompatEditText) findViewById(R.id.txtSecurityCode);
         txtCreatePassword = (AppCompatEditText) findViewById(R.id.txtPassword);
         txtConformPassword = (AppCompatEditText) findViewById(R.id.txtConfirmPassword);
+        btnCreateAccount = (Button) findViewById(R.id.btnCreateAccount);
         lblSecurityCode.setText(halted.getSaltString());
     }
 
+    /**
+     *
+     */
     private void init() {
         halted = new Halted();
     }
@@ -100,7 +119,7 @@ public class Registration extends AppCompatActivity {
         }
 
         public void onDateSet(DatePicker view, int year, int month, int day) {
-            update(year, month, day);
+            dateTimeUtils.update(year, month, day);
         }
 
     }
@@ -113,27 +132,26 @@ public class Registration extends AppCompatActivity {
         newFragment.show(getSupportFragmentManager(), "datePicker");
     }
 
-
     /**
-     * @param year
-     * @param month
-     * @param day
+     *
      */
-    private void update(int year, int month, int day) {
-        String strday;
-        String strmonth;
-
-        if ((month + 1) <= 9) {
-            strmonth = "0" + String.valueOf(month + 1);
-        } else {
-            strmonth = String.valueOf(month + 1);
-        }
-
-        if (day <= 9) {
-            strday = "0" + String.valueOf(day);
-        } else {
-            strday = String.valueOf(day);
-        }
-        txtDateOfBirth.setText(strmonth + "/" + strday + "/" + year);
+    private void updateRegistration() {
+        registration.setFirstName(txtFirstName.getText().toString().trim());
+        registration.setMiddleName(txtMiddleName.getText().toString().trim());
+        registration.setLastName(txtLastName.getText().toString().trim());
+        registration.setDateOfBirth(txtDateOfBirth.getText().toString().trim());
+        registration.setGender(txtGender.getSelectedItem().toString().trim());
+        registration.setProfession(txtProfession.getText().toString().trim());
+        registration.setAddress(txtAddress.getText().toString().trim());
+        registration.setCountry(txtCountry.getSelectedItem().toString().trim());
+        registration.setState(txtState.getSelectedItem().toString().trim());
+        registration.setCity(txtCity.getText().toString().trim());
+        registration.setArea(txtArea.getSelectedItem().toString().trim());
+        registration.setPinCode(txtPinCode.getText().toString().trim());
+        registration.setEmail(txtEmail.getText().toString().trim());
+        registration.setMobileNumber(txtMobileNumber.getText().toString().trim());
+        registration.setSecurityCode(txtSecurityCode.getText().toString().trim());
+        registration.setPassword(txtCreatePassword.getText().toString().trim());
+        Toast.makeText(Registration.this,registration.getFirstName(),Toast.LENGTH_LONG).show();
     }
 }

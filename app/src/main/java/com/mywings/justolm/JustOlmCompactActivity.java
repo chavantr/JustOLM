@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mywings.justolm.UserInteraction.OnNotificationListener;
+import com.mywings.justolm.Utilities.DateTimeUtils;
 import com.mywings.justolm.Utilities.NetworkUtil;
 import com.mywings.justolm.Utilities.ValidationHelper;
 
@@ -19,15 +20,17 @@ public abstract class JustOlmCompactActivity extends AppCompatActivity implement
 
     private NetworkUtil networkUtil;
     public ValidationHelper validationHelper;
+    public DateTimeUtils dateTimeUtils;
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         networkUtil = new NetworkUtil(getApplicationContext());
         validationHelper = new ValidationHelper();
+        dateTimeUtils = DateTimeUtils.getInstance();
+
     }
 
     @Override

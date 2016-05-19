@@ -31,7 +31,6 @@
     <string name="gender">Gender :</string>
 
 
-
     <string name="profession">Profession :</string>
     <string name="enter_profession">Enter your profession</string>
 
@@ -52,6 +51,9 @@
     <string name="enter_password">Enter password</string>
     <string name="confirm_password">Confirm Password :</string>
     <string name="create_account">Create Account</string>
+    <string name="state">State :</string>
+    <string name="city">City :</string>
+    <string name="enter_city">Enter city</string>
 
 
     <array name="gender">
@@ -62,12 +64,27 @@
 
 
     <array name="country">
-        <item>Select</item>
+        <item>Select country</item>
         <item>India</item>
         <item>US</item>
         <item>UK</item>
     </array>
 
+
+    <array name="state">
+        <item>Select state</item>
+        <item>Maharashtra</item>
+        <item>Gujrat</item>
+        <item>Goa</item>
+    </array>
+
+
+    <array name="area">
+        <item>Select area</item>
+        <item>Aundh</item>
+        <item>Baner</item>
+        <item>Shivaji Nagar</item>
+    </array>
 
 
 </resources>

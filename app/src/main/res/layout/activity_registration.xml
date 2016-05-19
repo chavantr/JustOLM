@@ -187,6 +187,65 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:text="@string/state"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/txtState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_controlshape"
+            android:entries="@array/state" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/city"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/txtCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_controlshape"
+            android:ellipsize="end"
+            android:hint="@string/enter_city"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:lines="1"
+            android:singleLine="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Area :"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/txtArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_controlshape"
+            android:entries="@array/area" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:text="@string/pin_code"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
@@ -273,9 +332,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2.5dp"
-                android:gravity="center"
                 android:layout_weight="50"
                 android:background="@drawable/login_controlshape"
+                android:gravity="center"
                 android:singleLine="true"
                 android:textStyle="bold" />
 

@@ -15,6 +15,9 @@ public class Registration {
     private String profession;
     private String address;
     private String country;
+    private String state;
+    private String city;
+    private String area;
     private String pinCode;
     private String email;
     private String mobileNumber;
@@ -132,5 +135,29 @@ public class Registration {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
     }
 }
