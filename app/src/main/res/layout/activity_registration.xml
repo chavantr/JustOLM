@@ -14,7 +14,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,7 +28,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/login_controlshape"
-            android:hint="@string/enter_first_name" />
+            android:ellipsize="end"
+            android:hint="@string/enter_first_name"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:lines="1"
+            android:singleLine="true" />
 
 
         <TextView
@@ -47,7 +51,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/login_controlshape"
-            android:hint="@string/enter_middle_name" />
+            android:ellipsize="end"
+            android:hint="@string/enter_middle_name"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:lines="1"
+            android:singleLine="true" />
 
 
         <TextView
@@ -65,7 +74,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/login_controlshape"
-            android:hint="@string/enter_last_name" />
+            android:ellipsize="end"
+            android:hint="@string/enter_last_name"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:lines="1"
+            android:singleLine="true" />
 
 
         <TextView
@@ -109,7 +123,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="@string/address"
+            android:text="@string/profession"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
 
@@ -120,7 +134,35 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/login_controlshape"
-            android:hint="@string/enter_address" />
+            android:ellipsize="end"
+            android:hint="@string/enter_profession"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:lines="1"
+            android:singleLine="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/address"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/txtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_controlshape"
+            android:ellipsize="end"
+            android:hint="@string/enter_address"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:lines="1"
+            android:singleLine="true" />
 
 
         <TextView
@@ -156,7 +198,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/login_controlshape"
-            android:hint="@string/enter_pin_code" />
+            android:ellipsize="end"
+            android:hint="@string/enter_pin_code"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:lines="1"
+            android:singleLine="true" />
 
 
         <TextView
@@ -174,8 +221,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/login_controlshape"
+            android:ellipsize="end"
             android:hint="@string/enter_email_id"
-            android:inputType="textEmailAddress" />
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            android:singleLine="true" />
 
 
         <TextView
@@ -193,8 +244,121 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/login_controlshape"
+            android:ellipsize="end"
             android:hint="Enter mobile number"
-            android:inputType="number" />
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:lines="1"
+            android:singleLine="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/security_code"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:weightSum="100">
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/lblSecurityCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2.5dp"
+                android:layout_weight="50"
+                android:background="@drawable/login_controlshape"
+                android:singleLine="true" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/txtSecurityCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2.5dp"
+                android:layout_weight="50"
+                android:background="@drawable/login_controlshape"
+                android:ellipsize="end"
+                android:hint="@string/enter_code"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:lines="1"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/create_password"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_controlshape"
+            android:ellipsize="end"
+            android:hint="@string/enter_password"
+
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:lines="1"
+
+
+            android:singleLine="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/confirm_password"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/txtConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_controlshape"
+            android:hint="Re-enter password"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:singleLine="true" />
+
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/chkTermsAndConditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="Terms and Conditions"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/btnCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="@string/create_account"
+            android:textAllCaps="false" />
 
 
     </LinearLayout>
