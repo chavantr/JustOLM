@@ -273,9 +273,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2.5dp"
+                android:gravity="center"
                 android:layout_weight="50"
                 android:background="@drawable/login_controlshape"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:textStyle="bold" />
 
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/txtSecurityCode"

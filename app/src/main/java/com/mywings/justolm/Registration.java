@@ -79,6 +79,7 @@ public class Registration extends AppCompatActivity {
         txtSecurityCode = (AppCompatEditText) findViewById(R.id.txtSecurityCode);
         txtCreatePassword = (AppCompatEditText) findViewById(R.id.txtPassword);
         txtConformPassword = (AppCompatEditText) findViewById(R.id.txtConfirmPassword);
+        lblSecurityCode.setText(halted.getSaltString());
     }
 
     private void init() {
