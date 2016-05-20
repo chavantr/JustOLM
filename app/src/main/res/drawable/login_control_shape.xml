@@ -8,7 +8,7 @@
                 android:color="#000000" />
 
             <solid
-                android:color="@android:color/white"
+                android:color="@android:color/transparent"
                 android:paddingLeft="0dip"
                 android:paddingTop="7dp" />
 
@@ -25,5 +25,10 @@
                 android:top="9dp" />
 
         </shape>
+    </item>
+    <item>
+        <bitmap
+            android:gravity="end"
+            android:src="@drawable/arrow_icon" />
     </item>
 </layer-list>

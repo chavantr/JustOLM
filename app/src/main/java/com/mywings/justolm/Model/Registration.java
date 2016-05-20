@@ -164,21 +164,21 @@ public class Registration {
 
     public boolean isEmptyField() {
         return getFirstName().isEmpty()
-                && getMiddleName().isEmpty()
-                && getLastName().isEmpty()
-                && getDateOfBirth().isEmpty()
-                && getGender().equalsIgnoreCase("I am...")
-                && getProfession().isEmpty()
-                && getAddress().isEmpty()
-                && getCountry().equalsIgnoreCase("Select country")
-                && getState().equalsIgnoreCase("Select state")
-                && getCity().isEmpty()
-                && getArea().equalsIgnoreCase("Select area")
-                && getPinCode().isEmpty()
-                && getEmail().isEmpty()
-                && getMobileNumber().isEmpty()
-                && getSecurityCode().isEmpty()
-                && getPassword().isEmpty();
+                || getMiddleName().isEmpty()
+                || getLastName().isEmpty()
+                || getDateOfBirth().isEmpty()
+                || getGender().equalsIgnoreCase("I am...")
+                || getProfession().isEmpty()
+                || getAddress().isEmpty()
+                || getCountry().equalsIgnoreCase("Select country")
+                || getState().equalsIgnoreCase("Select state")
+                || getCity().isEmpty()
+                || getArea().equalsIgnoreCase("Select area")
+                || getPinCode().isEmpty()
+                || getEmail().isEmpty()
+                || getMobileNumber().isEmpty()
+                || getSecurityCode().isEmpty()
+                || getPassword().isEmpty();
     }
 
     public boolean isNotEmptyField() {

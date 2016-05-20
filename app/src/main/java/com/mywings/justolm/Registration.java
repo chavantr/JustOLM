@@ -7,7 +7,6 @@ import android.support.v4.app.DialogFragment;
 import android.support.v7.widget.AppCompatCheckBox;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatSpinner;
-import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -35,7 +34,7 @@ public class Registration extends JustOlmCompactActivity {
     private AppCompatEditText txtPinCode;
     private AppCompatEditText txtEmail;
     private AppCompatEditText txtMobileNumber;
-    private AppCompatTextView lblSecurityCode;
+    private AppCompatEditText lblSecurityCode;
     private AppCompatEditText txtSecurityCode;
     private AppCompatEditText txtCreatePassword;
     private AppCompatEditText txtConformPassword;
@@ -91,7 +90,7 @@ public class Registration extends JustOlmCompactActivity {
         txtPinCode = (AppCompatEditText) findViewById(R.id.txtPinCode);
         txtEmail = (AppCompatEditText) findViewById(R.id.txtEmail);
         txtMobileNumber = (AppCompatEditText) findViewById(R.id.txtMobileNumber);
-        lblSecurityCode = (AppCompatTextView) findViewById(R.id.lblSecurityCode);
+        lblSecurityCode = (AppCompatEditText) findViewById(R.id.lblSecurityCode);
         txtSecurityCode = (AppCompatEditText) findViewById(R.id.txtSecurityCode);
         txtCreatePassword = (AppCompatEditText) findViewById(R.id.txtPassword);
         txtConformPassword = (AppCompatEditText) findViewById(R.id.txtConfirmPassword);
@@ -165,9 +164,23 @@ public class Registration extends JustOlmCompactActivity {
                 show(getString(R.string.action_all_fields_mandetory), btnCreateAccount);
             } else if (registration.isNotEmptyField()) {
 
+                if (!chkTermsAndCoditions.isChecked()) {
+                    show(getString(R.string.please_accept_terms_conditions), btnCreateAccount);
+                    return;
+                }
+                if (isConnected()) {
+
+                }
+
+            } else if (registration.getMobileNumber().length() < 10) {
+                show(getString(R.string.enter_valid_ten_digit_number), btnCreateAccount);
+            } else if (!registration.getSecurityCode().equalsIgnoreCase(lblSecurityCode.getText().toString().trim())) {
+                show(getString(R.string.security_code_not_match), btnCreateAccount);
+            } else if (registration.getMobileNumber().length() < 8) {
+                show(getString(R.string.enter_minimum_eight), btnCreateAccount);
+            } else if (registration.getPassword().equalsIgnoreCase(txtConformPassword.getText().toString().trim())) {
+                show(getString(R.string.password_doesnot_match), btnCreateAccount);
             }
-        } else {
-            show("Please try again", btnCreateAccount);
         }
     }
 

@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape"
+            android:background="@drawable/login_controlshape_"
             android:ellipsize="end"
             android:hint="@string/enter_first_name"
             android:imeOptions="actionNext"
@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape"
+            android:background="@drawable/login_controlshape_"
             android:ellipsize="end"
             android:hint="@string/enter_middle_name"
             android:imeOptions="actionNext"
@@ -73,7 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape"
+            android:background="@drawable/login_controlshape_"
             android:ellipsize="end"
             android:hint="@string/enter_last_name"
             android:imeOptions="actionNext"
@@ -93,10 +93,10 @@
 
         <android.support.v7.widget.AppCompatEditText
             android:id="@+id/txtDateOfBirth"
+            style="@style/spinner_date_picker"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape"
             android:focusable="false"
             android:hint="@string/select_date_of_birth" />
 
@@ -112,10 +112,10 @@
 
         <android.support.v7.widget.AppCompatSpinner
             android:id="@+id/txtGender"
+            style="@style/spinner_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape"
             android:entries="@array/gender" />
 
 
@@ -133,7 +133,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape"
+            android:background="@drawable/login_controlshape_"
             android:ellipsize="end"
             android:hint="@string/enter_profession"
             android:imeOptions="actionNext"
@@ -156,7 +156,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape"
+            android:background="@drawable/login_controlshape_"
             android:ellipsize="end"
             android:hint="@string/enter_address"
             android:imeOptions="actionNext"
@@ -176,10 +176,10 @@
 
         <android.support.v7.widget.AppCompatSpinner
             android:id="@+id/txtCountry"
+            style="@style/spinner_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape"
             android:entries="@array/country" />
 
 
@@ -194,10 +194,10 @@
 
         <android.support.v7.widget.AppCompatSpinner
             android:id="@+id/txtState"
+            style="@style/spinner_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape"
             android:entries="@array/state" />
 
 
@@ -215,7 +215,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape"
+            android:background="@drawable/login_controlshape_"
             android:ellipsize="end"
             android:hint="@string/enter_city"
             android:imeOptions="actionNext"
@@ -235,10 +235,10 @@
 
         <android.support.v7.widget.AppCompatSpinner
             android:id="@+id/txtArea"
+            style="@style/spinner_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape"
             android:entries="@array/area" />
 
 
@@ -256,11 +256,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape"
+            android:background="@drawable/login_controlshape_"
             android:ellipsize="end"
             android:hint="@string/enter_pin_code"
             android:imeOptions="actionNext"
-            android:inputType="textCapWords"
+            android:inputType="number"
             android:lines="1"
             android:singleLine="true" />
 
@@ -279,7 +279,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape"
+            android:background="@drawable/login_controlshape_"
             android:ellipsize="end"
             android:hint="@string/enter_email_id"
             android:imeOptions="actionNext"
@@ -302,7 +302,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape"
+            android:background="@drawable/login_controlshape_"
             android:ellipsize="end"
             android:hint="Enter mobile number"
             android:imeOptions="actionNext"
@@ -327,15 +327,17 @@
             android:weightSum="100">
 
 
-            <android.support.v7.widget.AppCompatTextView
+            <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/lblSecurityCode"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2.5dp"
                 android:layout_weight="50"
-                android:background="@drawable/login_controlshape"
+                android:background="@drawable/code_bg"
+                android:focusable="false"
                 android:gravity="center"
                 android:singleLine="true"
+                android:textColor="@android:color/white"
                 android:textStyle="bold" />
 
             <android.support.v7.widget.AppCompatEditText
@@ -344,7 +346,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2.5dp"
                 android:layout_weight="50"
-                android:background="@drawable/login_controlshape"
+                android:background="@drawable/login_controlshape_"
                 android:ellipsize="end"
                 android:hint="@string/enter_code"
                 android:imeOptions="actionNext"
@@ -368,7 +370,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape"
+            android:background="@drawable/login_controlshape_"
             android:ellipsize="end"
             android:hint="@string/enter_password"
 
@@ -394,7 +396,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape"
+            android:background="@drawable/login_controlshape_"
             android:hint="Re-enter password"
             android:imeActionId="@+id/btnCreateAccount"
             android:imeActionLabel="@string/create_account"

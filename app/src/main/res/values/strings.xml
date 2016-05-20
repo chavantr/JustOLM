@@ -11,7 +11,7 @@
     <string name="action_ok">OK</string>
     <string name="enter_valid_email">Please enter valid email.</string>
     <string name="enter_username_password">Please enter valid username and password.</string>
-    <string name="internect_connectivity">Please check internet connectivity.</string>
+    <string name="internect_connectivity">There is no internet connection,Please check your internet settings.</string>
     <string name="create_new_account">Create New Account</string>
     <string name="first_name">First Name :</string>
     <string name="enter_first_name">Enter first name</string>
@@ -55,6 +55,14 @@
     <string name="city">City :</string>
     <string name="enter_city">Enter city</string>
     <string name="action_all_fields_mandetory">All (*) fields are mandatory</string>
+    <string name="select_gender">Select gender</string>
+    <string name="enter_valid_ten_digit_number">Please enter valid 10 digit mobile number.</string>
+    <string name="security_code_not_match">Security code does not matched,Please enter valid security code.</string>
+    <string name="enter_minimum_eight">Password should be minimum 8 charachters.</string>
+    <string name="password_doesnot_match">Password doesn\'t match !</string>
+    <string name="please_accept_terms_conditions">Please accept terms and conditions.</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_login">Login</string>
 
 
     <array name="gender">

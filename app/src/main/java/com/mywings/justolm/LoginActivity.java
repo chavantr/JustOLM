@@ -1,8 +1,11 @@
 package com.mywings.justolm;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.AppCompatEditText;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -11,13 +14,16 @@ import android.widget.TextView;
 
 public class LoginActivity extends JustOlmCompactActivity {
 
+
+    //region
     private Button btnLogin;
     private Button btnRegister;
     private TextView lblAdminLogin;
     private TextView lblForgotPassword;
     private AppCompatEditText txtUserName;
     private AppCompatEditText txtPassword;
-
+    private Dialog dialog;
+    //endregion
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +67,14 @@ public class LoginActivity extends JustOlmCompactActivity {
                 startRegistration();
             }
         });
+
+        lblAdminLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog = showAdmin();
+                dialog.show();
+            }
+        });
     }
 
     private void isValidateLogin(View view) {
@@ -85,6 +99,30 @@ public class LoginActivity extends JustOlmCompactActivity {
         startActivity(intent);
     }
 
+    /**
+     *
+     */
+    private Dialog showAdmin() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View popup = inflater.inflate(R.layout.popup_admin, null);
+        Button btnLogin = (Button) popup.findViewById(R.id.btnLogin);
+        Button btnCancel = (Button) popup.findViewById(R.id.btnCancel);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        builder.setView(popup);
+        builder.setCancelable(false);
+        return builder.create();
+    }
 }
 

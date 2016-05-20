@@ -19,9 +19,9 @@
         android:topRightRadius="0dip" />
 
     <padding
-        android:bottom="0dp"
-        android:left="0dip"
-        android:right="0dip"
-        android:top="0dp" />
+        android:bottom="9dp"
+        android:left="4dip"
+        android:right="4dip"
+        android:top="9dp" />
 
 </shape>
