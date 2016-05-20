@@ -15,7 +15,7 @@ import android.widget.TextView;
 public class LoginActivity extends JustOlmCompactActivity {
 
 
-    //region
+    //region UI Controls
     private Button btnLogin;
     private Button btnRegister;
     private TextView lblAdminLogin;
@@ -75,6 +75,14 @@ public class LoginActivity extends JustOlmCompactActivity {
                 dialog.show();
             }
         });
+
+        lblForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog = showForgotPassword();
+                dialog.show();
+            }
+        });
     }
 
     private void isValidateLogin(View view) {
@@ -108,9 +116,60 @@ public class LoginActivity extends JustOlmCompactActivity {
         View popup = inflater.inflate(R.layout.popup_admin, null);
         Button btnLogin = (Button) popup.findViewById(R.id.btnLogin);
         Button btnCancel = (Button) popup.findViewById(R.id.btnCancel);
+        final AppCompatEditText txtUserName = (AppCompatEditText) popup.findViewById(R.id.userName);
+        final AppCompatEditText txtPassword = (AppCompatEditText) popup.findViewById(R.id.password);
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (txtUserName.getText().toString().isEmpty() && txtPassword.getText().toString().isEmpty()) {
+                    show(getString(R.string.enter_username_password), v);
+                } else if (txtUserName.getText().toString().isEmpty()) {
+                    show("Please enter email.", v);
+                } else if (txtPassword.getText().toString().isEmpty()) {
+                    show("Please enter valid password.", v);
+                } else if (!validationHelper.validate(txtUserName.getText().toString().trim())) {
+                    show("Please enter valid email.", v);
+                } else if (!txtUserName.getText().toString().isEmpty()
+                        && !txtPassword.getText().toString().isEmpty()
+                        && validationHelper.validate(txtUserName.getText().toString().trim())) {
+                    dialog.dismiss();
+                }
+
+            }
+        });
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        builder.setView(popup);
+        builder.setCancelable(false);
+        return builder.create();
+    }
+
+    /**
+     *
+     */
+    private Dialog showForgotPassword() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View popup = inflater.inflate(R.layout.popup_forgot, null);
+        Button btnLogin = (Button) popup.findViewById(R.id.btnLogin);
+        Button btnCancel = (Button) popup.findViewById(R.id.btnCancel);
+        final AppCompatEditText txtUserName = (AppCompatEditText) popup.findViewById(R.id.userName);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (!validationHelper.validate(txtUserName.getText().toString().trim())) {
+                    show("Please enter valid email.", v);
+                } else {
+                    dialog.dismiss();
+                    show("Password has been sent your email", btnRegister);
+                }
 
             }
         });

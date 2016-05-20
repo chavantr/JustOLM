@@ -10,14 +10,28 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <TextView
-        android:id="@+id/lblAdminLogin"
+        android:id="@+id/lblForgotPassword"
+        style="@style/Base.TextAppearance.AppCompat.Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:autoLink="none"
         android:gravity="center"
         android:linksClickable="true"
-        android:text="@string/action_login_admin"
+        android:text="@string/forgot_password"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/lblForgotPasswordSecondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:autoLink="none"
+        android:gravity="center"
+        android:linksClickable="true"
+        android:text="Enter your registered email address to get new password."
         android:textColor="@android:color/white"
         android:textStyle="bold" />
 
@@ -27,29 +41,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:background="@drawable/login_controlshape"
-        android:drawableLeft="@drawable/username_icon"
+        android:background="@drawable/login_controlshape_"
         android:gravity="center_vertical"
         android:hint="@string/prompt_email"
         android:inputType="textEmailAddress"
-        android:maxLines="1"
-        android:singleLine="true"
-        android:textColorHint="@color/colorAccent" />
-
-
-    <android.support.v7.widget.AppCompatEditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:background="@drawable/login_controlshape"
-        android:drawableLeft="@drawable/password_icon"
-        android:gravity="center_vertical"
-        android:hint="@string/prompt_password"
-        android:imeActionId="@+id/login"
-        android:imeActionLabel="@string/action_sign_in_short"
-        android:imeOptions="actionDone"
-        android:inputType="textPassword"
         android:maxLines="1"
         android:singleLine="true"
         android:textColorHint="@color/colorAccent" />
@@ -68,7 +63,6 @@
             android:layout_marginTop="7dp"
             android:layout_weight="50"
             android:text="@string/action_cancel"
-            android:textAllCaps="false"
             android:textStyle="bold" />
 
 
@@ -78,8 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
             android:layout_weight="50"
-            android:text="@string/action_login"
-            android:textAllCaps="false"
+            android:text="Done"
             android:textStyle="bold" />
 
 
