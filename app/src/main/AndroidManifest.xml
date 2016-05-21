@@ -13,6 +13,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name"
@@ -23,16 +24,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Registration"
             android:label="@string/create_new_account"
             android:launchMode="singleTask"
             android:parentActivityName=".LoginActivity"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
         <activity
-            android:name=".JustOLMScreen"
-            android:label="@string/title_activity_just_olmscreen"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".JustOLM"
+            android:label="@string/title_activity_just_olm"
+            android:theme="@style/AppTheme.NoActionBar" />
+
     </application>
 
 </manifest>

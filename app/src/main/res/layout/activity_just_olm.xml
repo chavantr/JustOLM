@@ -5,22 +5,26 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="false"
+    android:background="@drawable/login_bg"
+    android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
     <include
-        layout="@layout/app_bar_just_olmscreen"
+        layout="@layout/app_bar_just_olm"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
+        style="@style/NavigationDrawerStyle"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
         android:layout_gravity="start"
-        android:fitsSystemWindows="false"
-        app:headerLayout="@layout/nav_header_just_olmscreen"
-        app:menu="@menu/activity_just_olmscreen_drawer" />
+        android:background="@color/colorAccent"
+        app:itemBackground="@drawable/drawer_item_backround"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@null"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/activity_just_olm_drawer" />
 
 </android.support.v4.widget.DrawerLayout>

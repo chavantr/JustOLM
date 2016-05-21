@@ -42,6 +42,10 @@ public class LoginActivity extends JustOlmCompactActivity {
         getSupportActionBar().hide();
         txtUserName = (AppCompatEditText) findViewById(R.id.userName);
         txtPassword = (AppCompatEditText) findViewById(R.id.password);
+
+        txtUserName.setText("user@user.com");
+        txtPassword.setText("qweqwe");
+
         btnLogin = (Button) findViewById(R.id.btnSignIn);
         btnRegister = (Button) findViewById(R.id.btnRegister);
         lblAdminLogin = (TextView) findViewById(R.id.lblAdminLogin);
@@ -112,7 +116,7 @@ public class LoginActivity extends JustOlmCompactActivity {
      *
      */
     private void startJustOLMScreen() {
-        Intent intent = new Intent(LoginActivity.this, JustOLMScreen.class);
+        Intent intent = new Intent(LoginActivity.this, JustOLM.class);
         startActivity(intent);
     }
 
