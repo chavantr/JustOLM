@@ -95,6 +95,12 @@
         <item>Baner</item>
         <item>Shivaji Nagar</item>
     </array>
+    <string name="title_activity_just_olmscreen">JustOLMScreen</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 
 
 </resources>

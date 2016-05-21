@@ -178,7 +178,7 @@ public class Registration extends JustOlmCompactActivity {
                 show(getString(R.string.security_code_not_match), btnCreateAccount);
             } else if (registration.getMobileNumber().length() < 8) {
                 show(getString(R.string.enter_minimum_eight), btnCreateAccount);
-            } else if (registration.getPassword().equalsIgnoreCase(txtConformPassword.getText().toString().trim())) {
+            } else if (!registration.getPassword().equalsIgnoreCase(txtConformPassword.getText().toString().trim())) {
                 show(getString(R.string.password_doesnot_match), btnCreateAccount);
             }
         }

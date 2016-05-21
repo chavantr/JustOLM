@@ -87,7 +87,7 @@ public class LoginActivity extends JustOlmCompactActivity {
 
     private void isValidateLogin(View view) {
         if (!txtUserName.getText().toString().isEmpty() && !txtPassword.getText().toString().isEmpty() && validationHelper.validate(txtUserName.getText().toString().trim())) {
-
+            startJustOLMScreen();
         } else if (txtUserName.getText().toString().isEmpty() && txtPassword.getText().toString().isEmpty()) {
             show(getString(R.string.enter_username_password), view);
         } else if (!validationHelper.validate(txtUserName.getText().toString().trim())) {
@@ -104,6 +104,15 @@ public class LoginActivity extends JustOlmCompactActivity {
      */
     private void startRegistration() {
         Intent intent = new Intent(LoginActivity.this, Registration.class);
+        startActivity(intent);
+    }
+
+
+    /**
+     *
+     */
+    private void startJustOLMScreen() {
+        Intent intent = new Intent(LoginActivity.this, JustOLMScreen.class);
         startActivity(intent);
     }
 
@@ -135,6 +144,7 @@ public class LoginActivity extends JustOlmCompactActivity {
                         && !txtPassword.getText().toString().isEmpty()
                         && validationHelper.validate(txtUserName.getText().toString().trim())) {
                     dialog.dismiss();
+                    startJustOLMScreen();
                 }
 
             }
