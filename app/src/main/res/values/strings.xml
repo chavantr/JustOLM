@@ -13,46 +13,46 @@
     <string name="enter_username_password">Please enter valid username and password.</string>
     <string name="internect_connectivity">There is no internet connection,Please check your internet settings.</string>
     <string name="create_new_account">Create New Account</string>
-    <string name="first_name">First Name :</string>
+    <string name="first_name"><font color='red' size='20'>* </font>First Name :</string>
     <string name="enter_first_name">Enter first name</string>
 
-    <string name="middle_name">Middle Name :</string>
+    <string name="middle_name"><font color='red' size='20'>* </font>Middle Name :</string>
     <string name="enter_middle_name">Enter middle name</string>
 
 
-    <string name="last_name">Last Name :</string>
+    <string name="last_name"><font color='red' size='20'>* </font>Last Name :</string>
     <string name="enter_last_name">Enter last name</string>
 
 
-    <string name="date_of_birth">Date Of Birth :</string>
+    <string name="date_of_birth"><font color='red' size='20'>* </font>Date Of Birth :</string>
     <string name="select_date_of_birth">Select your date of birth</string>
 
 
-    <string name="gender">Gender :</string>
+    <string name="gender"><font color='red' size='20'>* </font>Gender :</string>
 
 
-    <string name="profession">Profession :</string>
+    <string name="profession"><font color='red' size='20'>* </font>Profession :</string>
     <string name="enter_profession">Enter your profession</string>
 
 
-    <string name="address">Address :</string>
+    <string name="address"><font color='red' size='20'>* </font>Address :</string>
     <string name="enter_address">Enter postal address</string>
 
 
-    <string name="country">Country :</string>
-    <string name="pin_code">Pin Code :</string>
+    <string name="country"><font color='red' size='20'>* </font>Country :</string>
+    <string name="pin_code"><font color='red' size='20'>* </font>Pin Code :</string>
     <string name="enter_pin_code">Enter pin code</string>
-    <string name="email_registration">Email :</string>
+    <string name="email_registration"><font color='red' size='20'>* </font>Email :</string>
     <string name="enter_email_id">Enter email id</string>
-    <string name="mobile">Mobile :</string>
-    <string name="security_code">Security Code :</string>
+    <string name="mobile"><font color='red' size='20'>* </font>Mobile :</string>
+    <string name="security_code"><font color='red' size='20'>* </font>Security Code :</string>
     <string name="enter_code">Enter code</string>
-    <string name="create_password">Create Password :</string>
+    <string name="create_password"><font color='red' size='20'>* </font>Create Password :</string>
     <string name="enter_password">Enter password</string>
-    <string name="confirm_password">Confirm Password :</string>
+    <string name="confirm_password"><font color='red' size='20'>* </font>Confirm Password :</string>
     <string name="create_account">Create Account</string>
-    <string name="state">State :</string>
-    <string name="city">City :</string>
+    <string name="state"><font color='red' size='20'>* </font>State :</string>
+    <string name="city"><font color='red' size='20'>* </font>City :</string>
     <string name="enter_city">Enter city</string>
     <string name="action_all_fields_mandetory">All (*) fields are mandatory</string>
     <string name="select_gender">Select gender</string>
