@@ -102,6 +102,14 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_just_olm">Home</string>
+    <string name="title_activity_my_profile">My Profile</string>
+    <string name="action_update_profile">Update Profile</string>
+    <string name="edit">Edit</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="action_yes">YES</string>
+    <string name="action_no">NO</string>
+    <string name="acton_logout">Do you really want to logout?</string>
 
 
 </resources>
