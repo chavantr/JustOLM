@@ -45,6 +45,7 @@ public class JustOLM extends JustOlmCompactActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -83,9 +84,7 @@ public class JustOLM extends JustOlmCompactActivity
                 break;
 
             case R.id.contactus:
-
                 startContactUs();
-
                 break;
 
             case R.id.logout:
@@ -100,7 +99,7 @@ public class JustOLM extends JustOlmCompactActivity
     }
 
     private void startContactUs() {
-        Intent intent = new Intent(JustOLM.this,ContactUs.class);
+        Intent intent = new Intent(JustOLM.this, ContactUs.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
     }

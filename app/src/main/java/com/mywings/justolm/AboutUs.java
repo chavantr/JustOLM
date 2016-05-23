@@ -49,6 +49,7 @@ public class AboutUs extends JustOlmCompactActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
         lblAboutUs = (AppCompatTextView) findViewById(R.id.lblAboutUs);
     }
@@ -81,14 +82,17 @@ public class AboutUs extends JustOlmCompactActivity
         switch (item.getItemId()) {
             case R.id.home:
                 startHomeScreen();
+                finish();
                 break;
 
             case R.id.profile:
                 startProfile();
+                finish();
                 break;
 
-            case R.id.abountus:
+            case R.id.contactus:
                 contactus();
+                finish();
                 break;
 
             case R.id.logout:

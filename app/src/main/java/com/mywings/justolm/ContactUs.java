@@ -38,6 +38,7 @@ public class ContactUs extends JustOlmCompactActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -71,17 +72,18 @@ public class ContactUs extends JustOlmCompactActivity
         switch (item.getItemId()) {
             case R.id.home:
                 startHomeScreen();
+                finish();
                 break;
 
             case R.id.profile:
                 startProfile();
+                finish();
                 break;
 
 
             case R.id.abountus:
-
                 startAboutUs();
-
+                finish();
                 break;
 
             case R.id.logout:

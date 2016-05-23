@@ -108,6 +108,7 @@ public class LoginActivity extends JustOlmCompactActivity {
      */
     private void startRegistration() {
         Intent intent = new Intent(LoginActivity.this, Registration.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
     }
 

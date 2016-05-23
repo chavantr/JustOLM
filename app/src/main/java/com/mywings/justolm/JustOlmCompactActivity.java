@@ -98,7 +98,9 @@ public abstract class JustOlmCompactActivity extends AppCompatActivity implement
 
     private void logoutScreen() {
         Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+                | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(i);
+        finish();
     }
 }
