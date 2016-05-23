@@ -112,6 +112,8 @@
     <string name="acton_logout">Do you really want to logout?</string>
     <string name="title_activity_about_us">About Us</string>
     <string name="aboutus">Mega Software Solution is web Development Company and having its office in India (Pune). Mega Software Solution provides quality and affordable services of Web development, Software Development, Enterprise Portal solutions and all type of Application Software to various clients across the globe. Our company specialises in Enterprise Resource Planing customization and web development services.\nMega Software Solution is providing affordable,custom and quality Software Development services and web design across the world with latest and emerging Web Technologies. Mega Software Solutions invites to its website visitors to outside their Web Design.Web Development services, Software Development and Android projects with us and save there money because we providing affordable and quality Software development and Web application service. Mega Software Solutions has a result - oriented team under one roof that comprises of Software / Web Consultants, Creative Designers, Developers, Content Writers, Programmers, Software Developers and Marketing professionals. Our team has flexibility to work with the clients in a way that meet client objectives. We provide extensive customer support to ensure clients satisfaction with the design , functionality and result expected from the solutions. </string>
+    <string name="title_activity_contact_us">Contact Us</string>
+    <string name="data_not_available">Data not available</string>
 
 
 </resources>

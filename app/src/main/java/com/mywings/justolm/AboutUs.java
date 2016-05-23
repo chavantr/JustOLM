@@ -78,7 +78,6 @@ public class AboutUs extends JustOlmCompactActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
 
-
         switch (item.getItemId()) {
             case R.id.home:
                 startHomeScreen();
@@ -86,6 +85,10 @@ public class AboutUs extends JustOlmCompactActivity
 
             case R.id.profile:
                 startProfile();
+                break;
+
+            case R.id.abountus:
+                contactus();
                 break;
 
             case R.id.logout:
@@ -97,6 +100,12 @@ public class AboutUs extends JustOlmCompactActivity
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void contactus() {
+        Intent intent = new Intent(AboutUs.this, ContactUs.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
     }
 
     private void startProfile() {

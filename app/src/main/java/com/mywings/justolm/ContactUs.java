@@ -10,30 +10,23 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.WindowManager;
 
-public class JustOLM extends JustOlmCompactActivity
+public class ContactUs extends JustOlmCompactActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
     //region UI Controls
+
     private DrawerLayout drawer;
+    private Dialog dialog;
+
     //endregion
 
-    //region Variables
-    private Dialog dialog;
-    //endregion
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_just_olm);
-
+        setContentView(R.layout.activity_contact_us);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -67,24 +60,27 @@ public class JustOLM extends JustOlmCompactActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        return false;
+
+        return super.onOptionsItemSelected(item);
     }
 
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+
         switch (item.getItemId()) {
+            case R.id.home:
+                startHomeScreen();
+                break;
+
             case R.id.profile:
                 startProfile();
                 break;
 
+
             case R.id.abountus:
+
                 startAboutUs();
-                break;
-
-            case R.id.contactus:
-
-                startContactUs();
 
                 break;
 
@@ -94,25 +90,25 @@ public class JustOLM extends JustOlmCompactActivity
                 break;
         }
 
-
         drawer.closeDrawer(GravityCompat.START);
+
         return true;
     }
 
-    private void startContactUs() {
-        Intent intent = new Intent(JustOLM.this,ContactUs.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        startActivity(intent);
-    }
-
     private void startAboutUs() {
-        Intent intent = new Intent(JustOLM.this, AboutUs.class);
+        Intent intent = new Intent(ContactUs.this, AboutUs.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
     }
 
     private void startProfile() {
-        Intent intent = new Intent(JustOLM.this, MyProfile.class);
+        Intent intent = new Intent(ContactUs.this, MyProfile.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
+
+    private void startHomeScreen() {
+        Intent intent = new Intent(ContactUs.this, JustOLM.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
     }
