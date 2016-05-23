@@ -32,10 +32,17 @@
         <activity
             android:name=".JustOLM"
             android:label="@string/title_activity_just_olm"
+            android:launchMode="singleInstance"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MyProfile"
             android:label="@string/title_activity_my_profile"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AboutUs"
+            android:label="@string/title_activity_about_us"
+            android:launchMode="singleInstance"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -118,6 +118,7 @@ public class LoginActivity extends JustOlmCompactActivity {
     private void startJustOLMScreen() {
         Intent intent = new Intent(LoginActivity.this, JustOLM.class);
         startActivity(intent);
+        this.finish();
     }
 
     /**
