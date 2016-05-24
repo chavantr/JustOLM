@@ -15,6 +15,7 @@
 
 
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lblIndex"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_gravity="center"
@@ -62,7 +63,7 @@
             android:id="@+id/rlName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:padding="3dp">
 
 
             <android.support.v7.widget.AppCompatEditText
@@ -86,6 +87,7 @@
                 android:hint="Qty"
                 android:imeOptions="actionDone"
                 android:inputType="number"
+                android:maxLength="2"
                 android:singleLine="true" />
 
 
@@ -97,7 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/rlName"
             android:gravity="center_vertical"
-            android:padding="5dp">
+            android:padding="3dp">
 
 
             <android.support.v7.widget.AppCompatTextView
@@ -131,7 +133,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rlScheduler"
-            android:padding="5dp">
+            android:padding="3dp">
 
 
             <android.support.v7.widget.AppCompatTextView
@@ -143,18 +145,20 @@
                 android:textStyle="bold" />
 
 
-            <android.support.v7.widget.AppCompatSpinner
+            <android.support.v7.widget.AppCompatEditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="55dp"
                 android:layout_marginRight="5dp"
                 android:layout_toRightOf="@+id/lblPeriod"
                 android:background="@null"
-                android:entries="@array/scheduler"
-                android:gravity="center_horizontal">
+                android:gravity="center"
+                android:inputType="number"
+                android:minWidth="9dp"
+                android:text="1">
 
 
-            </android.support.v7.widget.AppCompatSpinner>
+            </android.support.v7.widget.AppCompatEditText>
 
 
         </RelativeLayout>
