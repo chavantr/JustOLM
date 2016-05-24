@@ -75,6 +75,7 @@ public class JustOLM extends JustOlmCompactActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+
             case R.id.profile:
                 startProfile();
                 break;
@@ -87,6 +88,12 @@ public class JustOLM extends JustOlmCompactActivity
                 startContactUs();
                 break;
 
+            case R.id.neworder:
+
+                neworder();
+
+                break;
+
             case R.id.logout:
                 dialog = logout();
                 dialog.show();
@@ -96,6 +103,12 @@ public class JustOLM extends JustOlmCompactActivity
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void neworder() {
+        Intent intent = new Intent(JustOLM.this, NewOrder.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
     }
 
     private void startContactUs() {

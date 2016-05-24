@@ -60,7 +60,7 @@ public class LoginActivity extends JustOlmCompactActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isConnected())
+                //if (isConnected())
                     isValidateLogin(v);
             }
         });
@@ -118,6 +118,7 @@ public class LoginActivity extends JustOlmCompactActivity {
      */
     private void startJustOLMScreen() {
         Intent intent = new Intent(LoginActivity.this, JustOLM.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
         this.finish();
     }

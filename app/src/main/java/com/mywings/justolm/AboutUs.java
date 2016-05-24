@@ -32,7 +32,7 @@ public class AboutUs extends JustOlmCompactActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         initialization(toolbar);
-        setData();
+       // setData();
     }
 
     private void setData() {
@@ -95,6 +95,10 @@ public class AboutUs extends JustOlmCompactActivity
                 finish();
                 break;
 
+            case R.id.neworder:
+                neworder();
+                break;
+
             case R.id.logout:
                 dialog = logout();
                 dialog.show();
@@ -103,6 +107,7 @@ public class AboutUs extends JustOlmCompactActivity
 
 
         drawer.closeDrawer(GravityCompat.START);
+
         return true;
     }
 
@@ -122,5 +127,12 @@ public class AboutUs extends JustOlmCompactActivity
         Intent intent = new Intent(AboutUs.this, JustOLM.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
+    }
+
+    private void neworder() {
+        Intent intent = new Intent(AboutUs.this, NewOrder.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+        finish();
     }
 }

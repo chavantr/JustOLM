@@ -50,7 +50,7 @@
     <string name="create_password"><font color='red' size='20'>* </font>Create Password :</string>
     <string name="enter_password">Enter password</string>
     <string name="confirm_password"><font color='red' size='20'>* </font>Confirm Password :</string>
-    <string name="create_account">Create Account</string>
+    <string name="create_account">   Create Account   </string>
     <string name="state"><font color='red' size='20'>* </font>State :</string>
     <string name="city"><font color='red' size='20'>* </font>City :</string>
     <string name="enter_city">Enter city</string>
@@ -95,6 +95,16 @@
         <item>Baner</item>
         <item>Shivaji Nagar</item>
     </array>
+
+
+    <array name="scheduler">
+        <item>Weekly</item>
+        <item>Monthly</item>
+    </array>
+
+
+
+
     <string name="title_activity_just_olmscreen">Home</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -103,7 +113,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_just_olm">Home</string>
     <string name="title_activity_my_profile">My Profile</string>
-    <string name="action_update_profile">Update Profile</string>
+    <string name="action_update_profile">   Update Profile   </string>
     <string name="edit">Edit</string>
 
     <string name="cancel">Cancel</string>
@@ -114,6 +124,10 @@
     <string name="aboutus">Mega Software Solution is web Development Company and having its office in India (Pune). Mega Software Solution provides quality and affordable services of Web development, Software Development, Enterprise Portal solutions and all type of Application Software to various clients across the globe. Our company specialises in Enterprise Resource Planing customization and web development services.\nMega Software Solution is providing affordable,custom and quality Software Development services and web design across the world with latest and emerging Web Technologies. Mega Software Solutions invites to its website visitors to outside their Web Design.Web Development services, Software Development and Android projects with us and save there money because we providing affordable and quality Software development and Web application service. Mega Software Solutions has a result - oriented team under one roof that comprises of Software / Web Consultants, Creative Designers, Developers, Content Writers, Programmers, Software Developers and Marketing professionals. Our team has flexibility to work with the clients in a way that meet client objectives. We provide extensive customer support to ensure clients satisfaction with the design , functionality and result expected from the solutions. </string>
     <string name="title_activity_contact_us">Contact Us</string>
     <string name="data_not_available">Data not available</string>
+    <string name="title_activity_new_order">New Order</string>
+    <string name="please_insure_that_all_prescribed_items_will_have_continues_serial_number">Please insure that all prescribed items will have continues serial number</string>
+    <string name="prefer_time_to_accept_delivery">Prefer time to \naccept delivery</string>
+    <string name="scheduler">Scheduler:</string>
 
 
 </resources>

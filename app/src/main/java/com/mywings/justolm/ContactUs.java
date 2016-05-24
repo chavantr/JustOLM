@@ -86,6 +86,10 @@ public class ContactUs extends JustOlmCompactActivity
                 finish();
                 break;
 
+            case R.id.neworder:
+                neworder();
+                break;
+
             case R.id.logout:
                 dialog = logout();
                 dialog.show();
@@ -101,6 +105,13 @@ public class ContactUs extends JustOlmCompactActivity
         Intent intent = new Intent(ContactUs.this, AboutUs.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
+    }
+
+    private void neworder() {
+        Intent intent = new Intent(ContactUs.this, NewOrder.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+        finish();
     }
 
     private void startProfile() {

@@ -26,29 +26,29 @@
         <activity
             android:name=".Registration"
             android:label="@string/create_new_account"
-            android:launchMode="singleTask"
             android:parentActivityName=".LoginActivity"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
             android:name=".JustOLM"
             android:label="@string/title_activity_just_olm"
-            android:launchMode="singleInstance"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MyProfile"
             android:label="@string/title_activity_my_profile"
-            android:launchMode="singleInstance"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AboutUs"
             android:label="@string/title_activity_about_us"
-            android:launchMode="singleInstance"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ContactUs"
             android:label="@string/title_activity_contact_us"
-            android:launchMode="singleInstance"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NewOrder"
+            android:label="@string/title_activity_new_order"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"></activity>
     </application>
 
 </manifest>
