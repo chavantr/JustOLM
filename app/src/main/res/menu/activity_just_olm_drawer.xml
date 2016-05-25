@@ -14,10 +14,6 @@
             android:id="@+id/neworder"
             android:icon="@drawable/menu_icons_new_order"
             android:title="New Order" />
-        <item
-            android:id="@+id/amendorder"
-            android:icon="@drawable/menu_icons_amend_order"
-            android:title="Amend Order" />
 
 
         <item
@@ -25,9 +21,11 @@
             android:icon="@drawable/menu_icons_pending"
             android:title="Pending Order" />
         <item
-            android:id="@+id/amendscheduler"
-            android:icon="@drawable/menu_icons_amend_scheduler"
-            android:title="Amend Scheduler" />
+            android:id="@+id/amendorder"
+            android:icon="@drawable/menu_icons_amend_order"
+            android:title="Amend Order" />
+
+
         <item
             android:id="@+id/amendschedulerorder"
             android:icon="@drawable/menu_icons_amend_scheduler"

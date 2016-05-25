@@ -103,8 +103,6 @@
     </array>
 
 
-
-
     <string name="title_activity_just_olmscreen">Home</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -128,6 +126,9 @@
     <string name="please_insure_that_all_prescribed_items_will_have_continues_serial_number">Please insure that all prescribed items will have continues serial number</string>
     <string name="prefer_time_to_accept_delivery">Prefer time to \naccept delivery</string>
     <string name="scheduler">Scheduler:</string>
+    <string name="title_activity_pending_order">Pending Order</string>
+    <string name="lbl_confirm_prescribed">Confirm Prescribed Items</string>
+    <string name="lbl_confirm_user">Do you really want to confirm prescribed items to order?</string>
 
 
 </resources>

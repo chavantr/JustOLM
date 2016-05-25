@@ -87,6 +87,10 @@ public abstract class JustOlmCompactActivity extends AppCompatActivity implement
         return builder.create();
     }
 
+
+
+
+
     /**
      * @return
      */
