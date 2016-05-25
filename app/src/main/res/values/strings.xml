@@ -130,6 +130,8 @@
     <string name="lbl_confirm_prescribed">Confirm Prescribed Items</string>
     <string name="lbl_confirm_user">Do you really want to confirm prescribed items to order?</string>
     <string name="title_activity_amend_order">Amend Order</string>
+    <string name="title_activity_amend_scheduler">Amend Scheduler</string>
+    <string name="done">Done</string>
 
 
 </resources>

@@ -53,7 +53,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="9dp"
         android:layout_marginTop="4dp"
         android:weightSum="100">
 
@@ -64,6 +64,7 @@
             android:layout_marginTop="7dp"
             android:layout_weight="50"
             android:text="@string/action_cancel"
+            android:textAllCaps="false"
             android:textStyle="bold" />
 
 
@@ -73,7 +74,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
             android:layout_weight="50"
-            android:text="Done"
+            android:text="@string/done"
+            android:textAllCaps="false"
             android:textStyle="bold" />
 
 

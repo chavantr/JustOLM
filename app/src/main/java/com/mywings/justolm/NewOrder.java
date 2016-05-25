@@ -135,18 +135,8 @@ public class NewOrder extends JustOlmCompactActivity
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                btnAddPrescription.setEnabled(true);
-                lnrItems.setEnabled(true);
-
-                if (lnrItems.getChildCount() > 0) {
-                    lnrItems.removeAllViews();
-                    lnrItems.invalidate();
-                    index = -1;
-                    indexCount = 0;
-                    ui = null;
-                    ui = new HashMap<Integer, View>();
-                }
+                dialog = cancelOrder();
+                dialog.show();
             }
         });
 
@@ -300,8 +290,20 @@ public class NewOrder extends JustOlmCompactActivity
                 startAboutUs();
                 break;
 
+            case R.id.pendingorder:
+                startpendingscreen();
+                break;
+
             case R.id.contactus:
                 startContactUs();
+                break;
+
+            case R.id.amendorder:
+                startamendorder();
+                break;
+
+            case R.id.amendschedulerorder:
+                startamendscheduler();
                 break;
 
             case R.id.logout:
@@ -317,6 +319,20 @@ public class NewOrder extends JustOlmCompactActivity
 
     private void startpendingscreen() {
         Intent intent = new Intent(NewOrder.this, PendingOrder.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+        finish();
+    }
+
+    private void startamendscheduler() {
+        Intent intent = new Intent(NewOrder.this, AmendScheduler.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+        finish();
+    }
+
+    private void startamendorder() {
+        Intent intent = new Intent(NewOrder.this, AmendOrder.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
         finish();
@@ -365,6 +381,40 @@ public class NewOrder extends JustOlmCompactActivity
                 dialog.dismiss();
                 btnAddPrescription.setEnabled(false);
                 lnrItems.setEnabled(false);
+            }
+        });
+        builder.setNegativeButton(getString(R.string.action_no), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.setCancelable(false);
+        return builder.create();
+    }
+
+    /**
+     *
+     */
+    public Dialog cancelOrder() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("Cancel Order");
+        builder.setMessage("Do you really want to cancel your order?");
+        builder.setPositiveButton(getString(R.string.action_yes), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                btnAddPrescription.setEnabled(true);
+                lnrItems.setEnabled(true);
+                if (lnrItems.getChildCount() > 0) {
+                    lnrItems.removeAllViews();
+                    lnrItems.invalidate();
+                    index = -1;
+                    indexCount = 0;
+                    ui = null;
+                    ui = new HashMap<Integer, View>();
+                }
             }
         });
         builder.setNegativeButton(getString(R.string.action_no), new DialogInterface.OnClickListener() {

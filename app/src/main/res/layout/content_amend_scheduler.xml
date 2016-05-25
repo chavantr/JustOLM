@@ -9,8 +9,8 @@
     android:paddingRight="8dp"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.mywings.justolm.AmendOrder"
-    tools:showIn="@layout/app_bar_amend_order">
+    tools:context="com.mywings.justolm.AmendScheduler"
+    tools:showIn="@layout/app_bar_amend_scheduler">
 
 
     <android.support.v7.widget.RecyclerView
@@ -25,5 +25,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:visibility="gone" />
+
 
 </RelativeLayout>
