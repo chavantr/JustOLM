@@ -329,57 +329,6 @@
             android:lines="1"
             android:singleLine="true" />
 
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/create_password"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
-
-
-        <android.support.v7.widget.AppCompatEditText
-            android:id="@+id/txtPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape_"
-            android:ellipsize="end"
-            android:hint="@string/enter_password"
-            android:imeOptions="actionNext"
-            android:inputType="textPassword"
-            android:lines="1"
-
-
-            android:singleLine="true" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/confirm_password"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
-
-
-        <android.support.v7.widget.AppCompatEditText
-            android:id="@+id/txtConfirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/login_controlshape_"
-
-            android:hint="Re-enter password"
-            android:imeActionId="@+id/btnCreateAccount"
-            android:imeActionLabel="@string/create_account"
-            android:imeOptions="actionUnspecified"
-            android:inputType="textPassword"
-            android:lines="1"
-            android:singleLine="true" />
-
-
         <Button
             android:id="@+id/btnUpdateProfile"
             android:layout_width="match_parent"

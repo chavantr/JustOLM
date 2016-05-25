@@ -105,13 +105,14 @@ public class ContactUs extends JustOlmCompactActivity
         Intent intent = new Intent(ContactUs.this, AboutUs.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
+
     }
 
     private void neworder() {
         Intent intent = new Intent(ContactUs.this, NewOrder.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
-        finish();
+
     }
 
     private void startProfile() {
@@ -124,5 +125,12 @@ public class ContactUs extends JustOlmCompactActivity
         Intent intent = new Intent(ContactUs.this, JustOLM.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
+    }
+
+    private void startpendingscreen() {
+        Intent intent = new Intent(ContactUs.this, PendingOrder.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+        finish();
     }
 }

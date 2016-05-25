@@ -7,9 +7,16 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+import com.mywings.justolm.Binder.PendingOrdersAdapter;
+import com.mywings.justolm.Model.OrderCollection;
 
 public class PendingOrder extends JustOlmCompactActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -18,6 +25,9 @@ public class PendingOrder extends JustOlmCompactActivity
     //region UI Controls
     private DrawerLayout drawer;
     private Dialog dialog;
+    private RecyclerView lstPendingOrders;
+    private PendingOrdersAdapter pendingOrdersAdapter;
+    private Button btnEdit;
     //endregion
 
 
@@ -29,6 +39,25 @@ public class PendingOrder extends JustOlmCompactActivity
         setSupportActionBar(toolbar);
 
         initialization(toolbar);
+
+        btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (btnEdit.getText().toString().trim().equalsIgnoreCase("Edit")) {
+                    for (int i = 0; i < pendingOrdersAdapter.orders.size(); i++) {
+                        pendingOrdersAdapter.orders.get(i).setActionDelete(true);
+                    }
+                    pendingOrdersAdapter.notifyDataSetChanged();
+                    btnEdit.setText(R.string.cancel);
+                } else {
+                    for (int i = 0; i < pendingOrdersAdapter.orders.size(); i++) {
+                        pendingOrdersAdapter.orders.get(i).setActionDelete(false);
+                    }
+                    pendingOrdersAdapter.notifyDataSetChanged();
+                    btnEdit.setText(R.string.edit);
+                }
+            }
+        });
     }
 
     private void initialization(Toolbar toolbar) {
@@ -37,10 +66,20 @@ public class PendingOrder extends JustOlmCompactActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
+        btnEdit = (Button) findViewById(R.id.btnEdit);
+        lstPendingOrders = (RecyclerView) findViewById(R.id.lstPendingOrders);
+        lstPendingOrders.setLayoutManager(setLayout(LinearLayoutManager.VERTICAL));
+        pendingOrdersAdapter = new PendingOrdersAdapter(OrderCollection.getORDERS());
+        lstPendingOrders.setAdapter(pendingOrdersAdapter);
+    }
+
+    private LinearLayoutManager setLayout(int flow) {
+        final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
+        linearLayoutManager.setOrientation(flow);
+        return linearLayoutManager;
     }
 
     @Override

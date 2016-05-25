@@ -100,6 +100,12 @@ public class JustOLM extends JustOlmCompactActivity
 
                 break;
 
+            case R.id.amendorder:
+
+                startamendorder();
+
+                break;
+
             case R.id.logout:
                 dialog = logout();
                 dialog.show();
@@ -109,6 +115,12 @@ public class JustOLM extends JustOlmCompactActivity
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void startamendorder() {
+        Intent intent = new Intent(JustOLM.this, AmendOrder.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
     }
 
     private void startpendingscreen() {

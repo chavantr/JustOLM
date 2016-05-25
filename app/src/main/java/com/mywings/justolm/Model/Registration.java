@@ -196,9 +196,9 @@ public class Registration {
                 || getArea().equalsIgnoreCase("Select area")
                 || getPinCode().isEmpty()
                 || getEmail().isEmpty()
-                || getMobileNumber().isEmpty()
+                || getMobileNumber().isEmpty();
 
-                || getPassword().isEmpty();
+
     }
 
     public boolean isNotEmptyField() {
@@ -235,6 +235,6 @@ public class Registration {
                 && !getPinCode().isEmpty()
                 && !getEmail().isEmpty()
                 && !getMobileNumber().isEmpty()
-                && !getPassword().isEmpty();
+                ;
     }
 }
