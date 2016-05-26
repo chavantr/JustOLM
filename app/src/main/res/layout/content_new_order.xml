@@ -63,6 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lblTitle"
+        android:layout_marginTop="4dp"
         android:orientation="horizontal"
         android:weightSum="100">
 
@@ -76,7 +77,7 @@
             android:paddingRight="45dp"
             android:text="01/01/90"
             android:textColor="@android:color/black"
-            android:textStyle="bold" />
+            android:textStyle="normal" />
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/lblTime"
@@ -88,7 +89,7 @@
             android:paddingRight="9dp"
             android:text="11:01 PM"
             android:textColor="@android:color/black"
-            android:textStyle="bold" />
+            android:textStyle="normal" />
 
 
     </LinearLayout>
@@ -106,7 +107,7 @@
         android:scaleY="0.9"
         android:text="prescribed items"
         android:textColor="@android:color/black"
-        android:textStyle="bold" />
+        android:textStyle="normal" />
 
 
     <RelativeLayout
@@ -185,24 +186,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:padding="4dp"
             android:weightSum="100">
 
-            <Button
+            <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/btnAddPrescription"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
                 android:layout_weight="50"
+                android:background="@drawable/neworderaddprescription"
+                android:gravity="center"
                 android:text="Add Prescription"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@android:color/black" />
 
 
-            <Button
+            <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/btnConfirm"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+
+                android:layout_marginRight="3dp"
                 android:layout_weight="50"
+                android:background="@drawable/neworderaddprescription"
+                android:gravity="center"
                 android:text="Confirm"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@android:color/black" />
 
 
         </LinearLayout>
@@ -213,24 +226,35 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/lnrConfirm"
             android:orientation="horizontal"
+            android:padding="4dp"
             android:weightSum="100">
 
-            <Button
+            <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/btnCancel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
                 android:layout_weight="50"
+                android:background="@drawable/neworderaddprescriptioncancel"
+                android:gravity="center"
                 android:text="Cancel Order"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@android:color/black" />
 
 
-            <Button
+            <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/btnOrder"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
                 android:layout_weight="50"
+                android:background="@drawable/neworderaddprescriptioncolor"
+                android:gravity="center"
                 android:text="Order"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@android:color/black" />
 
 
         </LinearLayout>

@@ -57,7 +57,7 @@
 
             <Button
                 android:id="@+id/btnView"
-                android:layout_width="60dp"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"

@@ -40,6 +40,13 @@
             android:icon="@drawable/menu_icons_about_us"
             android:title="About Us" />
 
+
+        <item
+            android:id="@+id/changepassword"
+            android:icon="@drawable/password_icon"
+            android:title="Change Password" />
+
+
         <item
             android:id="@+id/logout"
             android:icon="@drawable/menu_icons_logout"

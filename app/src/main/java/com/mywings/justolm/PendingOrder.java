@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.mywings.justolm.Binder.PendingOrdersAdapter;
+import com.mywings.justolm.Binder.PendingOrdersSpinnerAdapter;
 import com.mywings.justolm.Model.OrderCollection;
 
 public class PendingOrder extends JustOlmCompactActivity
@@ -26,7 +26,7 @@ public class PendingOrder extends JustOlmCompactActivity
     private DrawerLayout drawer;
     private Dialog dialog;
     private RecyclerView lstPendingOrders;
-    private PendingOrdersAdapter pendingOrdersAdapter;
+    private PendingOrdersSpinnerAdapter pendingOrdersAdapter;
     private Button btnEdit;
     //endregion
 
@@ -72,7 +72,7 @@ public class PendingOrder extends JustOlmCompactActivity
         btnEdit = (Button) findViewById(R.id.btnEdit);
         lstPendingOrders = (RecyclerView) findViewById(R.id.lstPendingOrders);
         lstPendingOrders.setLayoutManager(setLayout(LinearLayoutManager.VERTICAL));
-        pendingOrdersAdapter = new PendingOrdersAdapter(OrderCollection.getORDERS());
+        pendingOrdersAdapter = new PendingOrdersSpinnerAdapter(OrderCollection.getORDERS());
         lstPendingOrders.setAdapter(pendingOrdersAdapter);
     }
 

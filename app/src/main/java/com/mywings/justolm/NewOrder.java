@@ -21,7 +21,6 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.LinearLayout;
 import android.widget.TimePicker;
@@ -40,14 +39,14 @@ public class NewOrder extends JustOlmCompactActivity
     //region UI Controls
 
     private LinearLayout lnrItems;
-    private Button btnAddPrescription;
+    private AppCompatTextView btnAddPrescription;
     private AppCompatImageView imgErase;
     private AppCompatTextView lblDate;
     private AppCompatTextView lblTime;
     private AppCompatCheckBox prescribed;
-    private Button btnCancel;
-    private Button btnConfirm;
-    private Button btnOrder;
+    private AppCompatTextView btnCancel;
+    private AppCompatTextView btnConfirm;
+    private AppCompatTextView btnOrder;
     //endregion
 
     //region Variables
@@ -173,10 +172,10 @@ public class NewOrder extends JustOlmCompactActivity
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
         lnrItems = (LinearLayout) findViewById(R.id.orders);
-        btnAddPrescription = (Button) findViewById(R.id.btnAddPrescription);
-        btnCancel = (Button) findViewById(R.id.btnCancel);
-        btnConfirm = (Button) findViewById(R.id.btnConfirm);
-        btnOrder = (Button) findViewById(R.id.btnOrder);
+        btnAddPrescription = (AppCompatTextView) findViewById(R.id.btnAddPrescription);
+        btnCancel = (AppCompatTextView) findViewById(R.id.btnCancel);
+        btnConfirm = (AppCompatTextView) findViewById(R.id.btnConfirm);
+        btnOrder = (AppCompatTextView) findViewById(R.id.btnOrder);
         lblDate = (AppCompatTextView) findViewById(R.id.lblDate);
         lblTime = (AppCompatTextView) findViewById(R.id.lblTime);
         prescribed = (AppCompatCheckBox) findViewById(R.id.rdbPrescribed);
