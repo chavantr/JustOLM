@@ -72,8 +72,22 @@ public class PendingOrder extends JustOlmCompactActivity
         btnEdit = (Button) findViewById(R.id.btnEdit);
         lstPendingOrders = (RecyclerView) findViewById(R.id.lstPendingOrders);
         lstPendingOrders.setLayoutManager(setLayout(LinearLayoutManager.VERTICAL));
+
         pendingOrdersAdapter = new PendingOrdersSpinnerAdapter(OrderCollection.getORDERS());
+        pendingOrdersAdapter.setOnItemClickListener(new PendingOrdersSpinnerAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int id) {
+
+                startpendingorderdetails();
+
+            }
+        });
         lstPendingOrders.setAdapter(pendingOrdersAdapter);
+    }
+
+    private void startpendingorderdetails() {
+        Intent intent = new Intent(PendingOrder.this, PendingOrderDetails.class);
+        startActivity(intent);
     }
 
     private LinearLayoutManager setLayout(int flow) {

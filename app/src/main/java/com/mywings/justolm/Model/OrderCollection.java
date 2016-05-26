@@ -11,7 +11,6 @@ public class OrderCollection {
     public static List<Order> getORDERS() {
         return ORDERS;
     }
-
     public static List<Order> ORDERS;
 
     static {
@@ -22,5 +21,4 @@ public class OrderCollection {
         ORDERS.add(new Order("2016-02-08 05:00 PM", "123456782", "Weekly", false, false));
         ORDERS.add(new Order("2016-02-09 05:00 PM", "123456783", "Weekly", false, false));
     }
-
 }

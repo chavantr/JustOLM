@@ -139,6 +139,8 @@
     <string name="title_activity_amend_order">Amend Order</string>
     <string name="title_activity_amend_scheduler">Amend Scheduler</string>
     <string name="done">Done</string>
+    <string name="title_activity_pending_order_details">Pending Order</string>
+    <string name="title_activity_amend_order_details">Amend Order</string>
 
 
 </resources>
