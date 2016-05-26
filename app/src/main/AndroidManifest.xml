@@ -81,15 +81,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mywings.justolm.PendingOrder" />
         </activity>
+
         <activity
             android:name=".AmendOrderDetails"
             android:label="@string/title_activity_amend_order_details"
             android:parentActivityName=".AmendOrder"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mywings.justolm.AmendOrder" />
+
         </activity>
+
     </application>
 
 </manifest>

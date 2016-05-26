@@ -1,5 +1,6 @@
 package com.mywings.justolm.Binder;
 
+import android.content.Intent;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.mywings.justolm.AmendOrderDetails;
 import com.mywings.justolm.Model.Order;
 import com.mywings.justolm.R;
 
@@ -40,7 +42,7 @@ public class PendingOrdersAdapter extends RecyclerView.Adapter<PendingOrdersAdap
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
 
         holder.lblOrderNo.setText("Order No : " + orders.get(position).getOrderNo());
         holder.lblOrderDate.setText("Order Date : " + orders.get(position).getOrderDate());
@@ -79,7 +81,9 @@ public class PendingOrdersAdapter extends RecyclerView.Adapter<PendingOrdersAdap
         holder.btnView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(v.getContext(), AmendOrderDetails.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                v.getContext().startActivity(intent);
             }
         });
 
