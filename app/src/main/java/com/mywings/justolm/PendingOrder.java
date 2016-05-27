@@ -149,6 +149,20 @@ public class PendingOrder extends JustOlmCompactActivity
                 finish();
                 break;
 
+
+            case R.id.amendorder:
+
+                startamendorder();
+                finish();
+                break;
+
+            case R.id.amendschedulerorder:
+
+                startamendscheduler();
+                finish();
+                break;
+
+
             case R.id.logout:
                 dialog = logout();
                 dialog.show();
@@ -156,6 +170,19 @@ public class PendingOrder extends JustOlmCompactActivity
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+
+    private void startamendscheduler() {
+        Intent intent = new Intent(PendingOrder.this, AmendScheduler.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
+
+    private void startamendorder() {
+        Intent intent = new Intent(PendingOrder.this, AmendOrder.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
     }
 
     private void contactus() {

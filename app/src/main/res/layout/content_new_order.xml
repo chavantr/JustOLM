@@ -20,43 +20,10 @@
         android:layout_marginTop="7dp"
         android:gravity="center"
         android:text="@string/please_insure_that_all_prescribed_items_will_have_continues_serial_number"
-        android:textColor="@android:color/black"
+        android:textColor="@color/colorPrimaryTitle"
         android:textSize="14sp"
         android:textStyle="bold" />
 
-
-    <!-- <LinearLayout
-         android:id="@+id/lnrTitle"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_below="@+id/lblTitle"
-         android:layout_marginTop="9dp"
-         android:orientation="horizontal"
-         android:weightSum="100">
-
-         <android.support.v7.widget.AppCompatTextView
-             android:layout_width="0dp"
-             android:layout_height="wrap_content"
-             android:layout_gravity="center_vertical"
-             android:layout_marginLeft="2dp"
-             android:layout_weight="50"
-             android:gravity="left|bottom"
-             android:text="Order Date"
-             android:textColor="@android:color/black"
-             android:textStyle="bold" />
-
-
-         <android.support.v7.widget.AppCompatTextView
-             android:layout_width="0dp"
-             android:layout_height="wrap_content"
-             android:layout_weight="50"
-             android:gravity="right"
-             android:text="@string/prefer_time_to_accept_delivery"
-             android:textColor="@android:color/black"
-             android:textStyle="bold" />
-
-
-     </LinearLayout>-->
 
     <LinearLayout
         android:id="@+id/lnrTitleValue"
@@ -72,11 +39,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="50"
-            android:gravity="center"
+
             android:paddingLeft="4dp"
             android:paddingRight="45dp"
             android:text="01/01/90"
-            android:textColor="@android:color/black"
+            android:textColor="@color/colorPrimaryTitle"
             android:textStyle="normal" />
 
         <android.support.v7.widget.AppCompatTextView
@@ -84,11 +51,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="50"
-            android:gravity="center"
+            android:gravity="right"
             android:paddingLeft="45dp"
             android:paddingRight="9dp"
             android:text="11:01 PM"
-            android:textColor="@android:color/black"
+            android:textColor="@color/colorPrimaryTitle"
             android:textStyle="normal" />
 
 
@@ -106,7 +73,7 @@
         android:scaleX="0.9"
         android:scaleY="0.9"
         android:text="prescribed items"
-        android:textColor="@android:color/black"
+        android:textColor="@color/colorPrimaryTitle"
         android:textStyle="normal" />
 
 
@@ -200,7 +167,7 @@
                 android:gravity="center"
                 android:text="Add Prescription"
                 android:textAllCaps="false"
-                android:textColor="@android:color/black" />
+                android:textColor="@color/colorPrimaryTitle" />
 
 
             <android.support.v7.widget.AppCompatTextView
@@ -215,7 +182,7 @@
                 android:gravity="center"
                 android:text="Confirm"
                 android:textAllCaps="false"
-                android:textColor="@android:color/black" />
+                android:textColor="@color/colorPrimaryTitle" />
 
 
         </LinearLayout>
@@ -240,7 +207,7 @@
                 android:gravity="center"
                 android:text="Cancel Order"
                 android:textAllCaps="false"
-                android:textColor="@android:color/black" />
+                android:textColor="@color/colorPrimaryTitle" />
 
 
             <android.support.v7.widget.AppCompatTextView
@@ -254,7 +221,7 @@
                 android:gravity="center"
                 android:text="Order"
                 android:textAllCaps="false"
-                android:textColor="@android:color/black" />
+                android:textColor="@color/colorPrimaryTitle" />
 
 
         </LinearLayout>

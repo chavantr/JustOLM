@@ -84,7 +84,6 @@ public class AmendScheduler extends JustOlmCompactActivity
 
         switch (item.getItemId()) {
 
-
             case R.id.home:
                 startHomeScreen();
                 finish();
@@ -101,7 +100,6 @@ public class AmendScheduler extends JustOlmCompactActivity
                 break;
 
             case R.id.pendingorder:
-
                 startpendingscreen();
                 finish();
                 break;
@@ -117,6 +115,7 @@ public class AmendScheduler extends JustOlmCompactActivity
                 finish();
 
                 break;
+
 
             case R.id.amendorder:
 

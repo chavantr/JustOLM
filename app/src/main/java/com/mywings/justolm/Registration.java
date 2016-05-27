@@ -29,7 +29,7 @@ public class Registration extends JustOlmCompactActivity {
     private AppCompatEditText txtAddress;
     private AppCompatSpinner txtCountry;
     private AppCompatSpinner txtState;
-    private AppCompatEditText txtCity;
+    private AppCompatSpinner txtCity;
     private AppCompatSpinner txtArea;
     private AppCompatEditText txtPinCode;
     private AppCompatEditText txtEmail;
@@ -84,7 +84,7 @@ public class Registration extends JustOlmCompactActivity {
         txtProfession = (AppCompatEditText) findViewById(R.id.txtProfession);
         txtAddress = (AppCompatEditText) findViewById(R.id.txtAddress);
         txtState = (AppCompatSpinner) findViewById(R.id.txtState);
-        txtCity = (AppCompatEditText) findViewById(R.id.txtCity);
+        txtCity = (AppCompatSpinner) findViewById(R.id.txtCity);
         txtArea = (AppCompatSpinner) findViewById(R.id.txtArea);
         txtCountry = (AppCompatSpinner) findViewById(R.id.txtCountry);
         txtPinCode = (AppCompatEditText) findViewById(R.id.txtPinCode);
@@ -147,7 +147,7 @@ public class Registration extends JustOlmCompactActivity {
         registration.setAddress(txtAddress.getText().toString().trim());
         registration.setCountry(txtCountry.getSelectedItem().toString().trim());
         registration.setState(txtState.getSelectedItem().toString().trim());
-        registration.setCity(txtCity.getText().toString().trim());
+        registration.setCity(txtCity.getSelectedItem().toString().trim());
         registration.setArea(txtArea.getSelectedItem().toString().trim());
         registration.setPinCode(txtPinCode.getText().toString().trim());
         registration.setEmail(txtEmail.getText().toString().trim());

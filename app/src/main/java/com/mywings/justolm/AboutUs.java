@@ -97,6 +97,18 @@ public class AboutUs extends JustOlmCompactActivity
 
             case R.id.neworder:
                 neworder();
+                finish();
+                break;
+
+
+            case R.id.amendorder:
+                startamendorder();
+                finish();
+                break;
+
+            case R.id.amendschedulerorder:
+                startamendscheduler();
+                finish();
                 break;
 
             case R.id.logout:
@@ -104,15 +116,18 @@ public class AboutUs extends JustOlmCompactActivity
                 dialog.show();
                 break;
         }
-
-
         drawer.closeDrawer(GravityCompat.START);
-
         return true;
     }
 
     private void contactus() {
         Intent intent = new Intent(AboutUs.this, ContactUs.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
+
+    private void startamendscheduler() {
+        Intent intent = new Intent(AboutUs.this, AmendScheduler.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
     }

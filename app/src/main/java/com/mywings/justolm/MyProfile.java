@@ -37,7 +37,7 @@ public class MyProfile extends JustOlmCompactActivity
     private AppCompatEditText txtAddress;
     private AppCompatSpinner txtCountry;
     private AppCompatSpinner txtState;
-    private AppCompatEditText txtCity;
+    private AppCompatSpinner txtCity;
     private AppCompatSpinner txtArea;
     private AppCompatEditText txtPinCode;
     private AppCompatEditText txtEmail;
@@ -118,7 +118,7 @@ public class MyProfile extends JustOlmCompactActivity
         txtProfession = (AppCompatEditText) findViewById(R.id.txtProfession);
         txtAddress = (AppCompatEditText) findViewById(R.id.txtAddress);
         txtState = (AppCompatSpinner) findViewById(R.id.txtState);
-        txtCity = (AppCompatEditText) findViewById(R.id.txtCity);
+        txtCity = (AppCompatSpinner) findViewById(R.id.txtCity);
         txtArea = (AppCompatSpinner) findViewById(R.id.txtArea);
         txtCountry = (AppCompatSpinner) findViewById(R.id.txtCountry);
         txtPinCode = (AppCompatEditText) findViewById(R.id.txtPinCode);
@@ -141,12 +141,12 @@ public class MyProfile extends JustOlmCompactActivity
         inputList.add(txtDateOfBirth);
         inputList.add(txtProfession);
         inputList.add(txtAddress);
-        inputList.add(txtCity);
         inputList.add(txtPinCode);
         inputList.add(txtEmail);
         inputList.add(txtMobileNumber);
 
         selectList.add(txtGender);
+        selectList.add(txtCity);
         selectList.add(txtState);
         selectList.add(txtArea);
         selectList.add(txtCountry);
@@ -195,7 +195,7 @@ public class MyProfile extends JustOlmCompactActivity
         registration.setAddress(txtAddress.getText().toString().trim());
         registration.setCountry(txtCountry.getSelectedItem().toString().trim());
         registration.setState(txtState.getSelectedItem().toString().trim());
-        registration.setCity(txtCity.getText().toString().trim());
+        registration.setCity(txtCity.getSelectedItem().toString().trim());
         registration.setArea(txtArea.getSelectedItem().toString().trim());
         registration.setPinCode(txtPinCode.getText().toString().trim());
         registration.setEmail(txtEmail.getText().toString().trim());
@@ -260,6 +260,22 @@ public class MyProfile extends JustOlmCompactActivity
                 neworder();
                 break;
 
+            case R.id.amendorder:
+                startamendorder();
+                finish();
+                break;
+
+            case R.id.amendschedulerorder:
+                startamendscheduler();
+                finish();
+                break;
+
+            case R.id.pendingorder:
+                startpendingscreen();
+                finish();
+                break;
+
+
             case R.id.logout:
                 dialog = logout();
                 dialog.show();
@@ -268,6 +284,19 @@ public class MyProfile extends JustOlmCompactActivity
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+
+    private void startamendscheduler() {
+        Intent intent = new Intent(MyProfile.this, AmendScheduler.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
+
+    private void startamendorder() {
+        Intent intent = new Intent(MyProfile.this, AmendOrder.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
     }
 
     private void contactus() {

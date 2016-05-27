@@ -18,6 +18,7 @@
         android:gravity="center"
         android:linksClickable="true"
         android:text="@string/action_login_admin"
+        android:textSize="22sp"
         android:textColor="@android:color/white"
         android:textStyle="bold" />
 

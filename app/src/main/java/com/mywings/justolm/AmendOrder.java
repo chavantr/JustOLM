@@ -110,17 +110,17 @@ public class AmendOrder extends JustOlmCompactActivity
         switch (item.getItemId()) {
             case R.id.home:
                 startHomeScreen();
-                finish();
+                //finish();
                 break;
 
             case R.id.profile:
                 startProfile();
-                finish();
+                //finish();
                 break;
 
             case R.id.contactus:
                 contactus();
-                finish();
+                //finish();
                 break;
 
             case R.id.neworder:
@@ -135,6 +135,10 @@ public class AmendOrder extends JustOlmCompactActivity
                 startAboutUs();
                 break;
 
+            case R.id.amendschedulerorder:
+                startamendscheduler();
+                break;
+
             case R.id.logout:
                 dialog = logout();
                 dialog.show();
@@ -147,23 +151,33 @@ public class AmendOrder extends JustOlmCompactActivity
         return true;
     }
 
+    private void startamendscheduler() {
+        Intent intent = new Intent(AmendOrder.this, AmendScheduler.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+        finish();
+    }
+
 
     private void contactus() {
         Intent intent = new Intent(AmendOrder.this, ContactUs.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
+        finish();
     }
 
     private void startProfile() {
         Intent intent = new Intent(AmendOrder.this, MyProfile.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
+        finish();
     }
 
     private void startHomeScreen() {
         Intent intent = new Intent(AmendOrder.this, JustOLM.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
+        finish();
     }
 
     private void neworder() {
@@ -177,6 +191,7 @@ public class AmendOrder extends JustOlmCompactActivity
         Intent intent = new Intent(AmendOrder.this, AboutUs.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
+        finish();
     }
 
     private void startpendingscreen() {

@@ -19,10 +19,11 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_gravity="center"
+
             android:layout_weight="9.9"
             android:gravity="center"
             android:text="5"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/colorPrimaryTitle" />
 
 
         <View
@@ -72,6 +73,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:hint="Enter item name"
+                android:textColor="@color/colorPrimaryTitle"
                 android:imeOptions="actionNext"
                 android:singleLine="true" />
 
@@ -85,6 +87,7 @@
                 android:background="@null"
                 android:gravity="center"
                 android:hint="Qty"
+                android:textColor="@color/colorPrimaryTitle"
                 android:imeOptions="actionDone"
                 android:inputType="number"
                 android:maxLength="2"
@@ -107,7 +110,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/scheduler"
-                android:textColor="@android:color/black"
+
+                android:textColor="@color/colorPrimaryTitle"
                 android:textStyle="bold" />
 
 
@@ -116,6 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"
+                android:textColor="@color/colorPrimaryTitle"
                 android:layout_toRightOf="@+id/lblScheduler"
                 android:background="@null"
                 android:entries="@array/scheduler"
@@ -141,7 +146,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Period:"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorPrimaryTitle"
                 android:textStyle="bold" />
 
 
