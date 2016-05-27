@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="production" format="boolean">false</item>
+
+    <item name="baseurl">http://yogeshkoli.com/justolm/auth/v1/</item>
+
+
+
+
+</resources>
