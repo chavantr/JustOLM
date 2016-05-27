@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import com.mywings.justolm.Binder.AmendOrderDetailAdapter;
+import com.mywings.justolm.Model.OrderDetailsCollection;
 
 public class AmendOrderDetails extends AppCompatActivity {
 
@@ -22,7 +23,7 @@ public class AmendOrderDetails extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         lstAmendOrderDetails = (RecyclerView) findViewById(R.id.lstAmendOrderDetails);
         lstAmendOrderDetails.setLayoutManager(setLayout(LinearLayoutManager.VERTICAL));
-        final AmendOrderDetailAdapter amendOrderDetailAdapter = new AmendOrderDetailAdapter();
+        final AmendOrderDetailAdapter amendOrderDetailAdapter = new AmendOrderDetailAdapter(OrderDetailsCollection.getORDERDETAILS());
         lstAmendOrderDetails.setAdapter(amendOrderDetailAdapter);
     }
 

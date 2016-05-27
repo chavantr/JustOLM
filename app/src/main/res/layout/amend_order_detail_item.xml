@@ -35,8 +35,8 @@
             <LinearLayout
                 android:id="@+id/lnrScheduler"
                 android:layout_width="match_parent"
-                android:layout_below="@+id/lblPrescribeName"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/lblPrescribeName"
                 android:orientation="horizontal"
                 android:padding="3dp"
                 android:weightSum="100">
@@ -76,13 +76,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lnrScheduler"
-                android:orientation="horizontal"
-                android:padding="1dp">
+                android:orientation="horizontal">
 
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
                     android:layout_marginRight="3dp"
+                    android:gravity="top"
                     android:text="Quantity :"
                     android:textColor="@color/colorPrimaryTitle"
                     android:textStyle="bold" />
@@ -92,10 +93,11 @@
                     android:id="@+id/txtQty"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
                     android:background="@null"
                     android:hint="Qty"
-                    android:inputType="number"
                     android:imeOptions="actionDone"
+                    android:inputType="number"
                     android:textColor="@color/colorPrimaryTitle" />
 
 
@@ -124,6 +126,7 @@
 
 
             <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgDeleteIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
